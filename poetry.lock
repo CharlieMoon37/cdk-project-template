@@ -29,6 +29,70 @@ tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)"
 tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins"]
 
 [[package]]
+name = "aws-cdk.aws-events"
+version = "1.119.0"
+description = "Amazon EventBridge Construct Library"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+"aws-cdk.aws-iam" = "1.119.0"
+"aws-cdk.core" = "1.119.0"
+constructs = ">=3.3.69,<4.0.0"
+jsii = ">=1.31.0,<2.0.0"
+publication = ">=0.0.3"
+
+[[package]]
+name = "aws-cdk.aws-iam"
+version = "1.119.0"
+description = "CDK routines for easily assigning correct and minimal IAM permissions"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+"aws-cdk.core" = "1.119.0"
+"aws-cdk.region-info" = "1.119.0"
+constructs = ">=3.3.69,<4.0.0"
+jsii = ">=1.31.0,<2.0.0"
+publication = ">=0.0.3"
+
+[[package]]
+name = "aws-cdk.aws-kms"
+version = "1.119.0"
+description = "The CDK Construct Library for AWS::KMS"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+"aws-cdk.aws-iam" = "1.119.0"
+"aws-cdk.core" = "1.119.0"
+"aws-cdk.cx-api" = "1.119.0"
+constructs = ">=3.3.69,<4.0.0"
+jsii = ">=1.31.0,<2.0.0"
+publication = ">=0.0.3"
+
+[[package]]
+name = "aws-cdk.aws-s3"
+version = "1.119.0"
+description = "The CDK Construct Library for AWS::S3"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+"aws-cdk.aws-events" = "1.119.0"
+"aws-cdk.aws-iam" = "1.119.0"
+"aws-cdk.aws-kms" = "1.119.0"
+"aws-cdk.core" = "1.119.0"
+"aws-cdk.cx-api" = "1.119.0"
+constructs = ">=3.3.69,<4.0.0"
+jsii = ">=1.31.0,<2.0.0"
+publication = ">=0.0.3"
+
+[[package]]
 name = "aws-cdk.cloud-assembly-schema"
 version = "1.119.0"
 description = "Cloud Assembly Schema"
@@ -453,7 +517,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6.2"
-content-hash = "972203deada9ee307afa24ee03e7eaf61a3d72b56cc33059a8ee1b53e76bf287"
+content-hash = "817d5af17a24d9417a161812c38fd9b3c84f4f3cdcebc1b4a1612e337951bdda"
 
 [metadata.files]
 appdirs = [
@@ -467,6 +531,22 @@ atomicwrites = [
 attrs = [
     {file = "attrs-21.2.0-py2.py3-none-any.whl", hash = "sha256:149e90d6d8ac20db7a955ad60cf0e6881a3f20d37096140088356da6c716b0b1"},
     {file = "attrs-21.2.0.tar.gz", hash = "sha256:ef6aaac3ca6cd92904cdd0d83f629a15f18053ec84e6432106f7a4d04ae4f5fb"},
+]
+"aws-cdk.aws-events" = [
+    {file = "aws-cdk.aws-events-1.119.0.tar.gz", hash = "sha256:a48deb7d637aacd7ca524c89ea2e7554666b6d9c58d722755afd763607dd861d"},
+    {file = "aws_cdk.aws_events-1.119.0-py3-none-any.whl", hash = "sha256:4a83ace23390ec7785743332f62796b6c695571f3e8f6765e42ac98311e71ced"},
+]
+"aws-cdk.aws-iam" = [
+    {file = "aws-cdk.aws-iam-1.119.0.tar.gz", hash = "sha256:1a22ce246add38edeadf791fde8e1df8b6a130a7e9010030690db7dbdfe39c78"},
+    {file = "aws_cdk.aws_iam-1.119.0-py3-none-any.whl", hash = "sha256:b1adbc292f5408af5daccfbd0d20ab63ed1aa41d2706cb0d74b91d0fd2b2aeea"},
+]
+"aws-cdk.aws-kms" = [
+    {file = "aws-cdk.aws-kms-1.119.0.tar.gz", hash = "sha256:884e29739db3b036f51eaac0e6cac1fc727ccf8236d046a9ccab1d0c6dee4b40"},
+    {file = "aws_cdk.aws_kms-1.119.0-py3-none-any.whl", hash = "sha256:8a968ad897f65e1257b3b8b4fc406f0a9bae5eab8e06cd7108afe45d6180eccd"},
+]
+"aws-cdk.aws-s3" = [
+    {file = "aws-cdk.aws-s3-1.119.0.tar.gz", hash = "sha256:cd25fae1c8d6e2aa420ee18401c70c7f66b567eb3fced00dcd4109224825bd9f"},
+    {file = "aws_cdk.aws_s3-1.119.0-py3-none-any.whl", hash = "sha256:35afec3842de3e27baf31998a56ea47a3d6449d14c1e5e322fb84030ce2e948e"},
 ]
 "aws-cdk.cloud-assembly-schema" = [
     {file = "aws-cdk.cloud-assembly-schema-1.119.0.tar.gz", hash = "sha256:871b92385b1e3fcde5ff1e39d19d09261a75f4c5acba16fca5bc6192bd55f909"},

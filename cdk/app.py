@@ -2,14 +2,14 @@
 import os
 
 from aws_cdk import core
-from stack import TemplateProjectStack
+from stack import CharliesProjectStack
 
 identifier = os.environ["IDENTIFIER"]
 
 app = core.App()
 
-app_stack = TemplateProjectStack(
-    app, f"TemplateProjectStack-{identifier}", identifier=identifier
+app_stack = CharliesProjectStack(
+    app, f"CharliesProjectStack-{identifier}", identifier=identifier
 )
 
 for k, v in {"OWNER": os.environ["OWNER"], "IDENTIFIER": identifier}.items():
